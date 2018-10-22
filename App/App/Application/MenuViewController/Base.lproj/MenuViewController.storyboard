@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MenuViewController" customModule="App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="axr-gr-LsB">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Меню" id="Dn8-aX-eHI">
+                                        <barButtonItem key="rightBarButtonItem" id="oGS-PP-8RA">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CBr-3E-g8U">
+                                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Режимы"/>
+                                                <connections>
+                                                    <action selector="layoutButtonTapInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R9x-uc-24q"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="az9-nk-JJn">
+                                <rect key="frame" x="0.0" y="64" width="375" height="1"/>
+                                <color key="backgroundColor" white="0.81725260416666679" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="2Qm-vn-Ttk"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XDC-tc-rAu">
+                                <rect key="frame" x="0.0" y="65" width="375" height="602"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Rob-WI-xCA" customClass="TopAlignedCollectionViewLayout" customModule="App" customModuleProvider="target">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="14" minY="14" maxX="14" maxY="14"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MenuItem" id="abp-Mg-i8G" customClass="MenuCollectionViewCell" customModule="App" customModuleProvider="target">
+                                        <rect key="frame" x="14" y="63" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Loading" id="iMh-Xo-QrX">
+                                        <rect key="frame" x="192" y="14" width="169" height="148"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="169" height="148"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Данные загружаются" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWB-fP-iRv">
+                                                    <rect key="frame" x="0.0" y="53.5" width="169" height="41"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="EWB-fP-iRv" firstAttribute="centerY" secondItem="iMh-Xo-QrX" secondAttribute="centerY" id="3Ga-WJ-ERK"/>
+                                            <constraint firstItem="EWB-fP-iRv" firstAttribute="centerX" secondItem="iMh-Xo-QrX" secondAttribute="centerX" id="4ck-JR-p0L"/>
+                                            <constraint firstItem="EWB-fP-iRv" firstAttribute="width" secondItem="iMh-Xo-QrX" secondAttribute="width" id="8xz-xK-z7a"/>
+                                        </constraints>
+                                        <size key="customSize" width="169" height="148"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Error" id="Bsl-yC-Tql">
+                                        <rect key="frame" x="14" y="172" width="169" height="148"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="169" height="148"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Произошла ошибка" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucN-PJ-sFy">
+                                                    <rect key="frame" x="0.0" y="64" width="169" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugL-Qu-JyS">
+                                                    <rect key="frame" x="30.5" y="86" width="108" height="30"/>
+                                                    <state key="normal" title="Перезагрузить"/>
+                                                    <connections>
+                                                        <action selector="reloadButtonTapInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6MJ-NY-ww1"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="ugL-Qu-JyS" firstAttribute="centerX" secondItem="Bsl-yC-Tql" secondAttribute="centerX" id="55m-qx-43e"/>
+                                            <constraint firstItem="ucN-PJ-sFy" firstAttribute="centerY" secondItem="Bsl-yC-Tql" secondAttribute="centerY" id="FiA-uy-SIK"/>
+                                            <constraint firstItem="ucN-PJ-sFy" firstAttribute="centerX" secondItem="Bsl-yC-Tql" secondAttribute="centerX" id="Mr9-kz-g5D"/>
+                                            <constraint firstItem="ucN-PJ-sFy" firstAttribute="width" secondItem="Bsl-yC-Tql" secondAttribute="width" id="Y5m-xP-55k"/>
+                                            <constraint firstItem="ugL-Qu-JyS" firstAttribute="top" secondItem="ucN-PJ-sFy" secondAttribute="bottom" constant="1.5" id="eqa-fQ-pcn"/>
+                                        </constraints>
+                                        <size key="customSize" width="169" height="148"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="axr-gr-LsB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0fq-dc-NAe"/>
+                            <constraint firstItem="axr-gr-LsB" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="2HI-9M-a0m"/>
+                            <constraint firstItem="XDC-tc-rAu" firstAttribute="top" secondItem="az9-nk-JJn" secondAttribute="bottom" id="Aeo-WQ-yjd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XDC-tc-rAu" secondAttribute="trailing" id="Bv2-NK-j1B"/>
+                            <constraint firstItem="XDC-tc-rAu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yao-qT-vhh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="az9-nk-JJn" secondAttribute="trailing" id="bh5-yf-VOi"/>
+                            <constraint firstItem="az9-nk-JJn" firstAttribute="top" secondItem="axr-gr-LsB" secondAttribute="bottom" id="bjj-cp-qlE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XDC-tc-rAu" secondAttribute="bottom" id="hJX-Sm-U8T"/>
+                            <constraint firstItem="az9-nk-JJn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hhI-7m-dkB"/>
+                            <constraint firstItem="axr-gr-LsB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="nTV-cS-ilF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="changeLayoutButton" destination="CBr-3E-g8U" id="IBC-YS-KiQ"/>
+                        <outlet property="menuCollectionView" destination="XDC-tc-rAu" id="2Dq-ES-pcw"/>
+                        <outlet property="menuCollectionViewLayout" destination="Rob-WI-xCA" id="qu7-Id-MqI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63.200000000000003" y="22.938530734632685"/>
+        </scene>
+    </scenes>
+</document>
